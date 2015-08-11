@@ -1,0 +1,13 @@
+# .gitignore template for skeleton-based apps
+/api/
+/build/
+/test/
+/source/script/
+/vendor/
+# node-related files
+/node_modules
+npm-debug.log
+
+#composer
+composer.lock
+/vendor/

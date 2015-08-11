@@ -1,0 +1,35 @@
+{
+    "name": "QxMaterial (Demo)",
+    "license": "MIT",
+    "type": "project",
+    "description": "QxMaterial demostration project",
+    "require": {
+        "qooxdoo/qooxdoo": "5.0",
+        "Estandarte/QxMaterial": "0.*"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "Estandarte/QxMaterial",
+                "version": "0.1",
+                "source": {
+                    "url": "git@github.com:Estandarte/QxMaterial.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }, {
+            "type": "package",
+            "package": {
+                "name": "qooxdoo/qooxdoo",
+                "version": "5.0",
+                "source": {
+                    "url": "git@github.com:qooxdoo/qooxdoo.git",
+                    "type": "git",
+                    "reference": "branch_5_0_x"
+                }
+            }
+        }
+    ]
+}

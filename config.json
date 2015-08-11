@@ -1,0 +1,57 @@
+{
+    "name": "QxMaterialDemo",
+    "include": [
+        {
+            "path": "${QOOXDOO_PATH}/tool/data/config/application.json"
+        }
+    ],
+
+    "export": [
+    "api",
+    "api-data",
+    "build",
+    "clean",
+    "distclean",
+    "dependencies",
+    "fix",
+    "info",
+    "lint",
+    "migration",
+    "pretty",
+    "profiling",
+    "source",
+    "source-all",
+    "source-hybrid",
+    "source-server",
+    "source-server-reload",
+    "source-httpd-config",
+    "test",
+    "test-source",
+    "translation",
+    "validate-config",
+    "validate-manifest",
+    "watch"
+  ],
+
+    "default-job": "source-hybrid",
+
+    "let": {
+        "APPLICATION": "qxmaterialdemo",
+        "QOOXDOO_PATH": "./vendor/qooxdoo/qooxdoo",
+        "QXTHEME": "qxmaterialdemo.theme.Theme",
+        "API_EXCLUDE": ["qx.test.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
+        "LOCALES": ["en"],
+        "CACHE": "${TMPDIR}/qx${QOOXDOO_VERSION}/cache",
+        "ROOT": "."
+    },
+
+    "jobs": {
+        "libraries": {
+            "library": [
+                {
+                    "manifest": "./vendor/Estandarte/QxMaterial/Manifest.json"
+                }
+            ]
+        }
+    }
+}
