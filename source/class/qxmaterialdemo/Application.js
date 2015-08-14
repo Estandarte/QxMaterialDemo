@@ -23,7 +23,7 @@ qx.Class.define("qxmaterialdemo.Application", {
             }
 
             // Create a button
-            var button1 = new qx.ui.form.Button("First Button");
+            var button1 = new qxm.ui.form.Button("First Button");
 
             // Document is the application root
             var doc = this.getRoot();
