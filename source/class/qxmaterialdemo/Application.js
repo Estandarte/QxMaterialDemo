@@ -1,7 +1,5 @@
 /**
  * Main application class of "QxMaterialDemo".
- *
- * @asset(qxmaterialdemo/*)
  */
 qx.Class.define("qxmaterialdemo.Application", {
     extend: qx.application.Standalone,
@@ -21,6 +19,9 @@ qx.Class.define("qxmaterialdemo.Application", {
                 // support native logging capabilities, e.g. Firebug for Firefox
                 qx.log.appender.Native;
             }
+
+            /* Enable context menu */
+            qx.core.Init.getApplication().getRoot().setNativeContextMenu(true);
 
             // Create a button
             var button1 = new qxm.ui.form.Button("First Button");
