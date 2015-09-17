@@ -29,7 +29,7 @@ qx.Class.define("qxmaterialdemo.Application", {
             root.add(doc, {top: 0, left: 0, bottom: 0, right: 0});
 
             // Create a button
-            var textfield = new qxm.ui.form.MTextField();
+            var textfield = new qxm.ui.form.MTextField().set({label: 'First Text'});
             doc.add(textfield);
 
             // Create a button
