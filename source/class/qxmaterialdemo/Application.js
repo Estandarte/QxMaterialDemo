@@ -2,7 +2,8 @@
  * Main application class of "QxMaterialDemo".
  */
 qx.Class.define("qxmaterialdemo.Application", {
-    extend: qx.application.Standalone,
+    extend: qxm.Application,
+    // extend: qxm.application.Standalone,
     members: {
         /**
          * This method contains the initial application code and gets called
@@ -22,23 +23,24 @@ qx.Class.define("qxmaterialdemo.Application", {
 
             /* Enable context menu */
             qx.core.Init.getApplication().getRoot().setNativeContextMenu(true);
+            var root = this.getRoot();
+            // Document is the application root
+            var doc = new qxm.ui.container.Composite(new qxm.ui.layout.VBox());
+            root.add(doc, {top: 0, left: 0, bottom: 0, right: 0});
 
             // Create a button
-            var button1 = new qxm.ui.form.Button("First Button");
+            var textfield = new qxm.ui.form.MTextField();
+            doc.add(textfield);
 
-            // Document is the application root
-            var doc = this.getRoot();
-
-            // Add button to document at fixed coordinates
-            doc.add(button1, {
-                left: 100,
-                top: 50
-            });
-
-            // Add an event listener
-            button1.addListener("execute", function(e) {
+            // Create a button
+            var button = new qxm.ui.form.Button("First Button");
+            button.addListener("execute", function(e) {
+                componentHandler.upgradeDom();
                 alert("Hello World!");
             });
+            doc.add(button);
+            componentHandler.upgradeDom();
+
         }
     }
 });
